@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="455.0" prefWidth="795.0" spacing="20.0" styleClass="fondo" stylesheets="@../../../css/estilos.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.proyectofinal.HelloController">
+<VBox alignment="CENTER" prefHeight="455.0" prefWidth="795.0" spacing="20.0" styleClass="fondo" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -28,6 +28,7 @@
                </font>
             </Label>
             <Button fx:id="btnLogin" layoutX="469.0" layoutY="334.0" mnemonicParsing="false" onAction="#Logear" text="LOGIN" />
+            <Button fx:id="btnCrearUsuario" layoutX="617.0" layoutY="334.0" mnemonicParsing="false" onAction="#crearUser" text="CREAR USUARIO" />
          </children>
       </AnchorPane>
    </children>
