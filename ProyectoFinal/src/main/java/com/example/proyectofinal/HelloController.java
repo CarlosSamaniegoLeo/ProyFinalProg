@@ -18,7 +18,7 @@ public class HelloController {
 
     @FXML
     void Logear(ActionEvent event) {
-
+        // Esto es una prueba
     }
 
 }
