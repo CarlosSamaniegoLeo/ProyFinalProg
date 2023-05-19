@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="455.0" prefWidth="795.0" spacing="20.0" styleClass="fondo" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.LoginController">
+<VBox alignment="CENTER" prefHeight="455.0" prefWidth="795.0" spacing="20.0" styleClass="fondo-login" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -17,12 +17,12 @@
          <children>
             <TextField fx:id="txtUser" layoutX="519.0" layoutY="41.0" />
             <TextField fx:id="txtPassword" layoutX="519.0" layoutY="105.0" />
-            <Label layoutX="458.0" layoutY="44.0" text="USER" textFill="WHITE">
+            <Label layoutX="445.0" layoutY="44.0" text="Usuario" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="421.0" layoutY="109.0" text="PASSWORD" textFill="#f4f2f2">
+            <Label layoutX="422.0" layoutY="108.0" text="Contraseña" textFill="#f4f2f2">
                <font>
                   <Font size="14.0" />
                </font>
