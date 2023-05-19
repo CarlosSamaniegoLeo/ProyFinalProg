@@ -8,6 +8,9 @@ import javafx.scene.control.TextField;
 public class LoginController {
 
     @FXML
+    private Button btnCrearUsuario;
+
+    @FXML
     private Button btnLogin;
 
     @FXML
@@ -18,7 +21,12 @@ public class LoginController {
 
     @FXML
     void Logear(ActionEvent event) {
-        // Esto es una prueba
+
+    }
+
+    @FXML
+    void crearUser(ActionEvent event) {
+
     }
 
 }
