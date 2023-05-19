@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.proyectofinal.Inicio"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="435.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="txtClasificacion" layoutX="61.0" layoutY="24.0" mnemonicParsing="false" onAction="#irClasificacion" prefHeight="33.0" prefWidth="31.0" styleClass="fondo-botonclas" stylesheets="@../../../css/estilos.css" />
+            <Button fx:id="txtCalendario" layoutX="179.0" layoutY="24.0" mnemonicParsing="false" onAction="#irCalendario" prefHeight="33.0" prefWidth="31.0" styleClass="fondo-botoncalen" stylesheets="@../../../css/estilos.css" />
+            <Button fx:id="btnFavoritos" layoutX="300.0" layoutY="29.0" mnemonicParsing="false" onAction="#irFavoritos" text="Button" />
+            <Separator layoutX="7.0" layoutY="73.0" prefHeight="5.0" prefWidth="583.0" />
+            <Button fx:id="btnNoticia" layoutX="22.0" layoutY="90.0" mnemonicParsing="false" onAction="#irNoticia" prefHeight="290.0" prefWidth="551.0" styleClass="fondo-botonnoticia" stylesheets="@../../../css/estilos.css" />
+            <TextField fx:id="txtBusqueda" layoutX="436.0" layoutY="29.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
