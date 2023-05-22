@@ -55,7 +55,7 @@ public class InicioController {
 
     @FXML
     void irNoticia(ActionEvent event) {
-        String url = "https://www.nike.com/es/";
+        String url = "https://www.marca.com/futbol/getafe/2023/05/17/6464ad06ca47410b478b45f0.html";
 
         if (Desktop.isDesktopSupported()) {
             Desktop desktop = Desktop.getDesktop();
@@ -69,7 +69,16 @@ public class InicioController {
 
     @FXML
     void irnoticia2(ActionEvent event) {
+        String url = "https://www.marca.com/futbol/caso-negreira.html";
 
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            try {
+                desktop.browse(new URI(url));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
