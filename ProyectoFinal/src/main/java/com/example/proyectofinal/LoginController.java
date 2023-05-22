@@ -58,7 +58,7 @@ public class LoginController {
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setContentText("Datos de administrador incorrectos");
+            alert.setContentText("Datos de usuario incorrectos");
             alert.showAndWait();
         }
     }
