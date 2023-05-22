@@ -31,6 +31,14 @@ public class LoginController {
     // Crear un HashMap y agregar algunos datos
     Map<String, String> mapa= new HashMap<>();
 
+    void initialize() {
+        // Añadir valores iniciales al HashMap
+        mapa.put("Carlos123", "Carlos");
+        mapa.put("Sergio123", "Sergio");
+        mapa.put("Victor123", "Victor");
+        mapa.put("Ivan123", "Ivan");
+        mapa.put("Alvaro123", "Alvaro");
+    }
     @FXML
     void Logear(ActionEvent event) {
 
