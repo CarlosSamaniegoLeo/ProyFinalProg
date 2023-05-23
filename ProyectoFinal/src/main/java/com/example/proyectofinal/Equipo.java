@@ -6,7 +6,7 @@ public class Equipo {
 
     private int victorias, derrotas, empates, goles_marcados, goles_encajados, puntos;
 
-    public Equipo(String nombre, String ciudad, int victorias, int derrotas, int empates, int goles_marcados, int goles_encajados, int puntos) {
+    public Equipo(String nombre, int victorias, int derrotas, int empates, int goles_marcados, int goles_encajados, int puntos) {
 
         this.nombre = nombre;
         this.ciudad = ciudad;

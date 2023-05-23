@@ -53,7 +53,7 @@ public class InicioController {
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("Clasificacion.fxml"));
         try {
             Parent root = (Parent) fxmlLoader.load();
-            InicioController controlador = (InicioController) fxmlLoader.getController();
+            ClasificacionController controlador = fxmlLoader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("Clasificacion");
