@@ -2,8 +2,13 @@ package com.example.proyectofinal;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
@@ -45,7 +50,22 @@ public class InicioController {
 
     @FXML
     void irClasificacion(ActionEvent event) {
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("Clasificacion.fxml"));
+        try {
+            Parent root = (Parent) fxmlLoader.load();
+            InicioController controlador = (InicioController) fxmlLoader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("Clasificacion");
+            stage.setScene(scene);
+            stage.show();
 
+            // Cerrar la ventana actual
+            Stage currentStage = (Stage) txtClasificacion.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException var7) {
+            throw new RuntimeException(var7);
+        }
     }
 
     @FXML

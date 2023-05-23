@@ -34,44 +34,43 @@ public class LoginController {
 
     public LoginController() throws SQLException {
     }
-
-    public void initialize() {
-
-    }
     @FXML
     void Logear(ActionEvent event) throws SQLException {
         String usuario = txtUser.getText();
         String password = txtPassword.getText();
         ResultSet rs = st.executeQuery("Select * from usuarios");
+        boolean acceso = false;
         while(rs.next()){
             String nombre = rs.getString("nombre");
             String constraseña = rs.getString("contrasena");
             String tipo = rs.getString("tipo");
             if (usuario.equals(nombre) && password.equals(constraseña)){
+                acceso = true;
+                FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("Inicio.fxml"));
+                try {
+                    Parent root = (Parent) fxmlLoader.load();
+                    InicioController controlador = (InicioController) fxmlLoader.getController();
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setTitle("Opciones");
+                    stage.setScene(scene);
+                    stage.show();
 
-                    if(tipo.equals("admin")){
-
-                    }else{
-                        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("Inicio.fxml"));
-                        try {
-                            Parent root = (Parent) fxmlLoader.load();
-                            InicioController controlador = (InicioController) fxmlLoader.getController();
-                            Scene scene = new Scene(root);
-                            Stage stage = new Stage();
-                            stage.setTitle("Opciones");
-                            stage.setScene(scene);
-                            stage.show();
-
-                            // Cerrar la ventana actual
-                            Stage currentStage = (Stage) btnLogin.getScene().getWindow();
-                            currentStage.close();
-                        } catch (IOException var7) {
-                            throw new RuntimeException(var7);
-                        }
-                    }
+                    // Cerrar la ventana actual
+                    Stage currentStage = (Stage) btnLogin.getScene().getWindow();
+                    currentStage.close();
+                } catch (IOException var7) {
+                    throw new RuntimeException(var7);
                 }
             }
+        } if (!acceso){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Usuario Incorrecto");
+            alert.setContentText("El usuario o la contraseña son incorrectos");
+            alert.showAndWait();
         }
+    }
+
 
 
 
@@ -98,6 +97,6 @@ public class LoginController {
             alert.setContentText("Debes de crear un usuario que no exista");
             alert.showAndWait();
         }
-        }
     }
+}
 
