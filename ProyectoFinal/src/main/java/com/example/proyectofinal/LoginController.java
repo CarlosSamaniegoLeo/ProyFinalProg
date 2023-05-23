@@ -29,7 +29,7 @@ public class LoginController {
     @FXML
     private TextField txtUser;
 
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto?serverTimezone=UTC", "root" , "Cs03102003");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto?serverTimezone=UTC", "root" , "toor");
     Statement st = con.createStatement();
 
     public LoginController() throws SQLException {
