@@ -17,7 +17,7 @@ public class DB {
     private static final String DB_MSQ_CONN_OK = "CONEXIÓN CORRECTA";
     private static final String DB_MSQ_CONN_NO = "ERROR EN LA CONEXIÓN";
 
-    // Configuración de la tabla Futbol
+    // Configuración de la tabla equipos
     private static final String DB_EQUIPO = "equipos";
     private static final String DB_EQUIPO_SELECT = "SELECT * FROM " + DB_EQUIPO;
     private static final String DB_EQUIPO_ID = "id";

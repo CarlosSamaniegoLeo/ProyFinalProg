@@ -4,9 +4,9 @@ public class Equipo {
     private String nombre;
     private String ciudad;
 
-    private int victorias, derrotas, empates, goles_marcados, goles_encajados, puntos;
+    private int victorias, derrotas, empates, goles_marcados, goles_encajados, puntuacion, posicion;
 
-    public Equipo(String nombre, int victorias, int derrotas, int empates, int goles_marcados, int goles_encajados, int puntos) {
+    public Equipo(String nombre, int victorias, int derrotas, int empates, int goles_marcados, int goles_encajados, int puntuacion, int posicion) {
 
         this.nombre = nombre;
         this.ciudad = ciudad;
@@ -15,17 +15,25 @@ public class Equipo {
         this.empates = empates;
         this.goles_marcados = goles_marcados;
         this.goles_encajados = goles_encajados;
-        this.puntos = puntos;
+        this.puntuacion = puntuacion;
+        this.posicion = posicion;
     }
 
 
-
-    public int getPuntos() {
-        return puntos;
+    public int getPosicion() {
+        return posicion;
     }
 
-    public void setPuntos(int puntos) {
-        this.puntos = puntos;
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
+
+    public int getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
     }
 
     public String getNombre() {
@@ -86,7 +94,7 @@ public class Equipo {
 
     public void mostrarEquipo(){
         System.out.println("Equipo "+this.nombre+" de la ciudad "+this.ciudad + " tiene " + this.victorias + " victorias, " +
-                this.derrotas + " derrotas y " + this.empates + " con un puntaje total de " + this.puntos + " puntos" +
+                this.derrotas + " derrotas y " + this.empates + " con un puntaje total de " + this.puntuacion + " puntos" +
                 " y " + this.goles_marcados + " goles marcados y " + this.goles_encajados + " goles encajados");
     }
 }
